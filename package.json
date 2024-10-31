@@ -1,0 +1,38 @@
+{
+  "name": "netflix-clone",
+  "version": "1.0.0",
+  "author": "Yevhenii Korolikhin",
+  "license": "ISC",
+  "description": "Netflix clone",
+  "type": "module",
+  "workspaces": [
+    "web-client",
+    "contracts"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace=web-client",
+    "build": "npm run build --workspace=contracts && npm run build --workspace=web-client",
+    "prepare": "husky",
+    "create-commit": "npx cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/config-lerna-scopes": "^19.5.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3"
+  },
+  "packageManager": "npm@10.9.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

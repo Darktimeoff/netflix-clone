@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "target": "es2020",
+    "module": "commonjs",
+    "lib": [
+        "es2022"
+    ],
+    "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true                         
+  },
+  "exclude": ["node_modules"],
+}

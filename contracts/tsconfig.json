@@ -1,0 +1,23 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo.json",
+        "baseUrl": "./",
+        "rootDir": "./src",
+        "lib": ["esnext"],
+        "types": ["node"],
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "src",
+        ".eslintrc.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
