@@ -13,7 +13,8 @@
   "scripts": {
     "start:web": "npm run start --workspace=web-client",
     "start:api": "npm run start --workspace=api-core",
-    "build": "npm run build --workspace=contracts && npm run build --workspace=web-client",
+    "ts": "tsc -p .",
+    "build": "npm run build --workspace=contracts && npm run build --workspace=web-client && npm run build --workspace=api-core",
     "prepare": "husky",
     "create-commit": "npx cz"
   },
