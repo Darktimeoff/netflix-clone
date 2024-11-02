@@ -1,4 +1,3 @@
-
 export interface UserEntityInterface {
-    id: number
+	id: number
 }
