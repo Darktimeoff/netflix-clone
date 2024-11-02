@@ -4,7 +4,7 @@
       {
         "label": "Run Frontend",
         "type": "shell",
-        "command": "npm run start:web",
+        "command": "pnpm run start:web",
         "presentation": {
           "reveal": "always",
           "panel": "new"
@@ -16,7 +16,7 @@
       {
         "label": "Run API",
         "type": "shell",
-        "command": "npm run start:api",
+        "command": "pnpm run start:api",
         "presentation": {
           "reveal": "always",
           "panel": "new"
