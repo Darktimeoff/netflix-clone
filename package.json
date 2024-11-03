@@ -12,7 +12,7 @@
     "build": "pnpm -F api-contracts -F  web-client -F api-core run build",
     "prepare": "husky",
     "create-commit": "npx cz",
-    "lint": "eslint . --fix",
+    "lint": "eslint . --fix --cache",
     "lint:style": "pnpm -F web-client run lint:style"
   },
   "devDependencies": {
