@@ -12,7 +12,7 @@
     "build": "pnpm -F api-contracts -F  web-client -F api-core run build",
     "prepare": "husky",
     "create-commit": "npx cz",
-    "lint:oxc": "oxlint --fix --import-plugin --tsconfig=./tsconfig.json --disable-react-plugin --promise-plugin --node-plugin --security-plugin",
+    "lint:oxc": "oxlint -c .oxlintrc.json --fix",
     "lint": "pnpm lint:oxc && eslint . --fix --cache",
     "lint:style": "pnpm -F web-client run lint:style"
   },
