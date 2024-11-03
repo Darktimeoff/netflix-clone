@@ -12,13 +12,15 @@
     "build": "pnpm -F api-contracts -F  web-client -F api-core run build",
     "prepare": "husky",
     "create-commit": "npx cz",
-    "lint": "eslint . --fix --cache",
+    "lint:oxc": "oxlint --fix --import-plugin --tsconfig=./tsconfig.json --disable-react-plugin --promise-plugin --node-plugin --security-plugin",
+    "lint": "pnpm lint:oxc && eslint . --fix --cache",
     "lint:style": "pnpm -F web-client run lint:style"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/config-lerna-scopes": "^19.5.0",
+    "@eslint/config-inspector": "^0.5.6",
     "@nuxt/eslint-config": "^0.6.1",
     "@stylistic/eslint-plugin": "^2.10.1",
     "commitizen": "^4.3.1",

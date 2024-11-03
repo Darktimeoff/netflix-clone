@@ -1,6 +1,5 @@
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
-// import oxlint from 'eslint-plugin-oxlint' .append(oxlint.configs['flat/all'])
-// "lint:oxc": "oxlint --fix --fix-suggestions --import-plugin --tsconfig=./tsconfig.json --disable-react-plugin --promise-plugin --node-plugin --security-plugin",
+import oxlint from 'eslint-plugin-oxlint'
 
 export default createConfigForNuxt({
 	features: {
@@ -14,4 +13,10 @@ export default createConfigForNuxt({
 	rules: {
 		'@typescript-eslint/no-extraneous-class': 'off',
 	},
-})
+}).append([
+	{
+
+		files: ['**/*.ts', '**/*.js'],
+		...oxlint.configs['flat/all'],
+	},
+])
